@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { categories, getToolsByCategory } from "@/data/tools";
 import { generateCategoryMetadata } from "@/lib/seo";
 import ToolGrid from "@/components/ToolGrid";
+import AdUnit from "@/components/AdUnit";
 import * as Icons from "lucide-react";
 
 export async function generateStaticParams() {
@@ -46,11 +47,9 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
 
-        {/* Ad Placeholder */}
+        {/* Ad */}
         <div className="mb-12">
-          <div className="rounded-2xl bg-gray-200 dark:bg-gray-700 p-8 text-center">
-            <p className="text-gray-500 dark:text-gray-400">Advertisement</p>
-          </div>
+          <AdUnit format="auto" responsive={true} />
         </div>
 
         {/* Tools Grid */}

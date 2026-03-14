@@ -3,6 +3,7 @@ import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 import CategoryCard from "@/components/CategoryCard";
 import ToolGrid from "@/components/ToolGrid";
+import AdUnit from "@/components/AdUnit";
 import { categories, tools, getPopularTools } from "@/data/tools";
 
 export default function Home() {
@@ -71,12 +72,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ad Placeholder */}
-      <section className="py-12 bg-gray-50 dark:bg-gray-800">
+      {/* Ad */}
+      <section className="py-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-gray-200 dark:bg-gray-700 p-12 text-center">
-            <p className="text-gray-500 dark:text-gray-400">Advertisement</p>
-          </div>
+          <AdUnit format="auto" responsive={true} />
         </div>
       </section>
 

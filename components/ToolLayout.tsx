@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Tool, tools, categories } from "@/data/tools";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import AdUnit from "./AdUnit";
 
 interface ToolLayoutProps {
   tool: Tool;
@@ -34,11 +35,9 @@ export default function ToolLayout({ tool, children, faqs }: ToolLayoutProps) {
           </div>
         </div>
 
-        {/* Ad Placeholder */}
+        {/* Ad */}
         <div className="mb-12">
-          <div className="rounded-2xl bg-gray-200 dark:bg-gray-700 p-8 text-center">
-            <p className="text-gray-500 dark:text-gray-400">Advertisement</p>
-          </div>
+          <AdUnit format="auto" responsive={true} />
         </div>
 
         {/* Description Section */}
